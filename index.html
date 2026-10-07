@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Ring | Serenità e protezione sempre con te</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 selection:bg-teal-100 selection:text-teal-900">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 transition-all">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <!-- Logo Ufficiale Anello -->
+                <img src="logo-anello.png" alt="SOS Ring Logo" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <!-- Fallback in caso manchi l'immagine del logo -->
+                <div class="hidden w-10 h-10 rounded-full bg-gradient-to-tr from-teal-500 to-sky-500 items-center justify-center font-bold text-white shadow-md shadow-teal-500/20">
+                    <i class="fa-solid fa-ring text-lg"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tight text-slate-900">SOS <span class="text-teal-600">RING</span></span>
+            </div>
+            <div class="hidden md:flex gap-8 font-medium text-slate-600">
+                <a href="#home" class="hover:text-teal-600 transition">Home</a>
+                <a href="#come-funziona" class="hover:text-teal-600 transition">Come Funziona</a>
+                <a href="#l-app" class="hover:text-teal-600 transition">L'App</a>
+                <a href="#maker-faire" class="hover:text-teal-600 transition">Il Progetto</a>
+            </div>
+            <a href="#maker-faire" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2.5 rounded-full font-semibold transition shadow-md shadow-teal-600/20 text-sm">
+                Maker Faire
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="pt-36 pb-24 px-6 min-h-[90vh] flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-sky-50/60 via-white to-slate-50">
+        <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-teal-200/30 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute top-40 right-10 w-72 h-72 bg-sky-200/40 rounded-full blur-2xl -z-10"></div>
+
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 border border-teal-200/60 text-teal-700 text-sm font-medium mb-6 shadow-sm">
+                <i class="fa-solid fa-shield-heart text-teal-500 text-xs"></i> Un piccolo gesto per la tua tranquillità
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+                Vivi ogni momento con <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-sky-600">totale serenità.</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
+                Un anello smart per la sicurezza connesso allo smartphone, basta un click per inviare GPS, SMS e chiamate a 3 contatti preimpostati in caso di emergenza.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#come-funziona" class="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition shadow-lg shadow-teal-600/25 flex items-center justify-center gap-2">
+                    Scopri la tecnologia <i class="fa-solid fa-arrow-down text-sm"></i>
+                </a>
+                <a href="#l-app" class="bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 px-8 py-4 rounded-full font-semibold text-lg transition shadow-sm flex items-center justify-center gap-2">
+                    Guarda l'App <i class="fa-solid fa-mobile-screen text-teal-600"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COME FUNZIONA -->
+    <section id="come-funziona" class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-teal-600 font-semibold uppercase tracking-wider text-xs">Semplice ed efficace</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Come SOS Ring ti tiene sempre al sicuro.</h2>
+                <p class="text-slate-600 max-w-lg mx-auto">Progettato per funzionare in modo naturale, senza complicazioni o falsi allarmi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-bluetooth"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Connesso e Discreto</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Si collega al tuo smartphone via Bluetooth a basso consumo, garantendo batterie durature e connessione stabile.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-sky-100 text-sky-700 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">I Tuoi 3 Contatti</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Sull'app dedicata scegli le 3 persone di fiducia da avvisare in caso di necessità con messaggi personalizzati.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-hand-pointer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Pressione di 3 Sec</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Basta tenere premuto l'anello per 3 secondi. Il tempo ideale per evitare tocchi involontari ed essere sicuri.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-sky-100 text-sky-700 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Invio Immediato</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">L'app fa partire immediatamente le chiamate e invia le notifiche ai contatti con la tua posizione.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE APP & VIDEO -->
+    <section id="l-app" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-teal-600 font-semibold uppercase tracking-wider text-xs">L'Ecosistema</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">L'App Ufficiale e il Progetto in Azione</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Un'interfaccia intuitiva sviluppata dal nostro team e un sistema di protezione sempre attivo in background.</p>
+            </div>
+
+            <div class="flex flex-col gap-12">
+                
+                <!-- COLONNA SINISTRA: Video Presentazione -->
+                <div class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-xl flex flex-col items-center w-full max-w-4xl mx-auto">
+                    <h3 class="text-xl font-bold text-slate-900 w-full text-left mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-play text-teal-500"></i> Video Presentazione
+                    </h3>
+                    <div class="w-full rounded-2xl overflow-hidden bg-black shadow-inner aspect-video">
+                        <video src="sos-ring-video.mp4" controls autoplay loop muted playsinline preload="metadata" class="w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"></video>
+                        <div class="hidden w-full h-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-teal-500 to-sky-600 text-white">
+                            <i class="fa-solid fa-film text-4xl opacity-80"></i>
+                            <span class="text-sm font-semibold">Video in arrivo</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500 mt-6 text-center">Guarda il cortometraggio realizzato per mostrare il funzionamento di SOS Ring nella vita reale.</p>
+                </div>
+
+                <!-- COLONNA DESTRA: Screenshot Ufficiali App -->
+                <div class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-xl">
+                    <h3 class="text-xl font-bold text-slate-900 w-full text-left mb-6 flex items-center gap-2">
+                        <i class="fa-brands fa-android text-teal-500"></i> Interfaccia SOS Ring
+                    </h3>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+                        <!-- Screen 1: Status -->
+                        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-100 group relative">
+                            <img src="app-status.jpg" loading="lazy" alt="Schermata Status" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                                <span class="text-white text-xs font-semibold">Status Dispositivo</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Screen 2: Contatti -->
+                        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-100 group relative">
+                            <img src="app-contatti.jpg" loading="lazy" alt="Schermata Contatti" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                                <span class="text-white text-xs font-semibold">Gestione Contatti</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Screen 3: Impostazioni -->
+                        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-100 group relative">
+                            <img src="app-impostazioni.jpg" loading="lazy" alt="Schermata Impostazioni" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                                <span class="text-white text-xs font-semibold">Messaggio & Associazione</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Screen 4: Permessi / Guida -->
+                        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-100 group relative">
+                            <img src="app-guida.jpg" loading="lazy" alt="Schermata Guida Permessi" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                                <span class="text-white text-xs font-semibold">Guida e Permessi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE MAKER FAIRE & SCUOLA -->
+    <section id="maker-faire" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">Un progetto per la Maker Faire</h2>
+            <p class="text-slate-600 text-lg leading-relaxed max-w-3xl mx-auto mb-12">
+                Nato nei laboratori scolastici, <strong>SOS Ring</strong> unisce elettronica indossabile e sviluppo software mobile con un unico grande obiettivo: offrire uno strumento concreto per la sicurezza personale.
+            </p>
+
+            <!-- Box Loghi Scuola e Progetto -->
+            <div class="flex flex-col items-center justify-center p-10 bg-slate-50 rounded-3xl border border-slate-200 shadow-sm mb-12">
+                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">Sviluppato e supportato da</h4>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-12 sm:gap-20">
+                    <!-- Logo Scuola -->
+                    <div class="flex flex-col items-center gap-4">
+                        <img src="logo-itet-rapisardi-da-vinci.jpg" loading="lazy" alt="Logo ITET Rapisardi Da Vinci" class="h-32 w-auto object-contain drop-shadow-md">
+                        <span class="text-sm font-semibold text-slate-700">ITET Rapisardi Da Vinci<br>Caltanissetta</span>
+                    </div>
+                    <!-- Logo Progetto -->
+                    <div class="flex flex-col items-center gap-4">
+                        <img src="logo-anello.png" alt="Logo SOS Ring" class="h-32 w-auto object-contain drop-shadow-md" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden h-32 w-32 rounded-full bg-gradient-to-tr from-teal-500 to-sky-500 items-center justify-center text-white shadow-md shadow-teal-500/20">
+                            <i class="fa-solid fa-ring text-5xl"></i>
+                        </div>
+                        <span class="text-sm font-semibold text-slate-700">Progetto SOS Ring</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-8 bg-gradient-to-r from-teal-500 to-sky-600 text-white rounded-3xl shadow-xl shadow-teal-500/15">
+                <h3 class="text-2xl font-bold mb-2">Vieni a trovarci al nostro stand!</h3>
+                <p class="text-teal-50 text-sm max-w-xl mx-auto">Potrai indossare il prototipo dell'anello, provare l'applicazione Android e testare le simulazioni di emergenza in tempo reale.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-slate-50 border-t border-slate-200 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                © 2026 SOS Ring • ITET Rapisardi Da Vinci Cal
