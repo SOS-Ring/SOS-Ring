@@ -233,5 +233,138 @@
     </footer>
 
 
+    <!-- ============================================================
+         AGGIUNTA: SELETTORE LINGUA IT / EN
+         (il resto della pagina qui sopra è rimasto invariato)
+         ============================================================ -->
+    <button id="lang-toggle" type="button" aria-label="Cambia lingua / Change language"
+        class="fixed bottom-5 right-5 z-[100] flex items-center gap-2 bg-white/95 backdrop-blur-md border border-slate-200 text-slate-800 pl-3 pr-4 py-2.5 rounded-full shadow-lg shadow-slate-900/10 hover:shadow-xl hover:-translate-y-0.5 transition font-semibold text-sm">
+        <i class="fa-solid fa-globe text-teal-600"></i>
+        <span id="lang-toggle-label">🇬🇧 English</span>
+    </button>
+
+    <script>
+    (function () {
+        var EN = {
+            // Titolo pagina
+            "SOS Ring | Serenità e protezione sempre con te": "SOS Ring | Peace of mind and protection, always with you",
+
+            // Navbar
+            "Come Funziona": "How It Works",
+            "L'App": "The App",
+            "Il Progetto": "The Project",
+
+            // Hero
+            "Un piccolo gesto per la tua tranquillità": "A small gesture for your peace of mind",
+            "Vivi ogni momento con": "Live every moment with",
+            "totale serenità.": "total peace of mind.",
+            "Un anello smart per la sicurezza connesso allo smartphone, basta un click per inviare GPS, SMS e chiamate a 3 contatti preimpostati in caso di emergenza.":
+                "A smart safety ring connected to your smartphone: a single click sends GPS location, SMS and calls to 3 preset contacts in case of emergency.",
+            "Scopri la tecnologia": "Discover the technology",
+            "Guarda l'App": "See the App",
+
+            // Come funziona
+            "Semplice ed efficace": "Simple and effective",
+            "Come SOS Ring ti tiene sempre al sicuro.": "How SOS Ring keeps you safe, always.",
+            "Progettato per funzionare in modo naturale, senza complicazioni o falsi allarmi.": "Designed to work naturally, with no hassle or false alarms.",
+            "Connesso e Discreto": "Connected and Discreet",
+            "Si collega al tuo smartphone via Bluetooth a basso consumo, garantendo batterie durature e connessione stabile.": "It connects to your smartphone via low-energy Bluetooth, ensuring long battery life and a stable connection.",
+            "I Tuoi 3 Contatti": "Your 3 Contacts",
+            "Sull'app dedicata scegli le 3 persone di fiducia da avvisare in caso di necessità con messaggi personalizzati.": "In the dedicated app, choose the 3 trusted people to alert in case of need, with customized messages.",
+            "Pressione di 3 Sec": "3-Second Press",
+            "Basta tenere premuto l'anello per 3 secondi. Il tempo ideale per evitare tocchi involontari ed essere sicuri.": "Just press and hold the ring for 3 seconds. The ideal time to avoid accidental touches and be sure.",
+            "Invio Immediato": "Instant Alert",
+            "L'app fa partire immediatamente le chiamate e invia le notifiche ai contatti con la tua posizione.": "The app immediately starts the calls and sends notifications to your contacts with your location.",
+
+            // App & video
+            "L'Ecosistema": "The Ecosystem",
+            "L'App Ufficiale e il Progetto in Azione": "The Official App and the Project in Action",
+            "Un'interfaccia intuitiva sviluppata dal nostro team e un sistema di protezione sempre attivo in background.": "An intuitive interface developed by our team and a protection system that is always active in the background.",
+            "Video Presentazione": "Presentation Video",
+            "Video in arrivo": "Video coming soon",
+            "Guarda il cortometraggio realizzato per mostrare il funzionamento di SOS Ring nella vita reale.": "Watch the short film made to show how SOS Ring works in real life.",
+            "Interfaccia SOS Ring": "SOS Ring Interface",
+            "Status Dispositivo": "Device Status",
+            "Gestione Contatti": "Contact Management",
+            "Messaggio & Associazione": "Message & Pairing",
+            "Guida e Permessi": "Guide & Permissions",
+
+            // Maker Faire
+            "Un progetto per la Maker Faire": "A project for the Maker Faire",
+            "Nato nei laboratori scolastici,": "Born in the school labs,",
+            "unisce elettronica indossabile e sviluppo software mobile con un unico grande obiettivo: offrire uno strumento concreto per la sicurezza personale.": "combines wearable electronics and mobile software development with one big goal: to offer a concrete tool for personal safety.",
+            "Sviluppato e supportato da": "Developed and supported by",
+            "Progetto SOS Ring": "SOS Ring Project",
+            "Vieni a trovarci al nostro stand!": "Come and visit our stand!",
+            "Potrai indossare il prototipo dell'anello, provare l'applicazione Android e testare le simulazioni di emergenza in tempo reale.": "You will be able to wear the ring prototype, try the Android app and test emergency simulations in real time.",
+
+            // Footer
+            "© 2026 SOS Ring • ITET Rapisardi Da Vinci Caltanissetta": "© 2026 SOS Ring • ITET Rapisardi Da Vinci Caltanissetta",
+            "Presentato alla Maker Faire": "Presented at the Maker Faire"
+        };
+
+        var EN_ALT = {
+            "Schermata Status": "Status screen",
+            "Schermata Contatti": "Contacts screen",
+            "Schermata Impostazioni": "Settings screen",
+            "Schermata Guida Permessi": "Permissions guide screen",
+            "Logo ITET Rapisardi Da Vinci": "ITET Rapisardi Da Vinci logo"
+        };
+
+        var ITA_TITLE = document.title;
+        var current = "it";
+        var textNodes = [];   // { node, it, en }
+        var altNodes = [];    // { el, it, en }
+
+        function norm(s) { return s.replace(/\s+/g, " ").trim(); }
+
+        // Raccoglie i nodi di testo traducibili (senza toccare il DOM)
+        var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+            acceptNode: function (n) {
+                var p = n.parentNode;
+                if (!p) return NodeFilter.FILTER_REJECT;
+                var tag = p.nodeName;
+                if (tag === "SCRIPT" || tag === "STYLE" || tag === "NOSCRIPT") return NodeFilter.FILTER_REJECT;
+                if (p.closest && p.closest("#lang-toggle")) return NodeFilter.FILTER_REJECT;
+                return EN[norm(n.nodeValue)] ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+            }
+        });
+        var n;
+        while ((n = walker.nextNode())) {
+            var raw = n.nodeValue;
+            var lead = raw.match(/^\s*/)[0];
+            var trail = raw.match(/\s*$/)[0];
+            textNodes.push({ node: n, it: raw, en: lead + EN[norm(raw)] + trail });
+        }
+
+        document.querySelectorAll("img[alt]").forEach(function (img) {
+            var a = img.getAttribute("alt");
+            if (EN_ALT[a]) altNodes.push({ el: img, it: a, en: EN_ALT[a] });
+        });
+
+        var btn = document.getElementById("lang-toggle");
+        var label = document.getElementById("lang-toggle-label");
+
+        function apply(lang) {
+            current = lang;
+            textNodes.forEach(function (t) { t.node.nodeValue = (lang === "en") ? t.en : t.it; });
+            altNodes.forEach(function (a) { a.el.setAttribute("alt", (lang === "en") ? a.en : a.it); });
+            document.documentElement.lang = lang;
+            document.title = (lang === "en") ? EN[ITA_TITLE] : ITA_TITLE;
+            label.textContent = (lang === "en") ? "🇮🇹 Italiano" : "🇬🇧 English";
+            try { localStorage.setItem("sosring-lang", lang); } catch (e) {}
+        }
+
+        btn.addEventListener("click", function () {
+            apply(current === "it" ? "en" : "it");
+        });
+
+        // Ripristina la lingua scelta in precedenza
+        try {
+            if (localStorage.getItem("sosring-lang") === "en") apply("en");
+        } catch (e) {}
+    })();
+    </script>
+
 </body>
 </html>
