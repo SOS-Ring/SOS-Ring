@@ -4,3 +4,5 @@ avvia chiamate e SMS verso contatti preimpostati. Il dispositivo comunica via Bl
 con lo smartphone e integra un’app dedicata per la gestione delle emergenze. Il progetto unisce
 elettronica, programmazione e design per creare un sistema di emergenza immediato e realmente
 utilizzabile nella vita quotidiana.
+
+LINK: sos-ring.github.io/SOS-Ring
