@@ -50,13 +50,13 @@ void setup() {
 void loop() {
   bool current = digitalRead(buttonPin);
 
-  // 🔴 inizio pressione
+  
   if (lastState == HIGH && current == LOW) {
     pressStart = millis();
     sent = false;
   }
 
-  // ⏱️ dopo 2 secondi invia UNA volta
+ 
   if (current == LOW && !sent && millis() - pressStart >= 2000) {
     if (deviceConnected) {
       pCharacteristic->setValue("ale23");
