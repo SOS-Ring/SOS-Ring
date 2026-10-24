@@ -10,9 +10,9 @@ LINK: sos-ring.github.io/SOS-Ring
 Contatti:
 sosringbt@gmail.com
 
-Autori:\n
-Campisi Alessio (linkedin.com/in/alessio-campisi-6b6227358)\n
-Anzalone Giulio\n
-Villa Giorgio\n
-Russo Vincenzo\n
+Autori:
+Campisi Alessio (linkedin.com/in/alessio-campisi-6b6227358);
+Anzalone Giulio;
+Villa Giorgio;
+Russo Vincenzo;
 Rosamaria Barone
