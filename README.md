@@ -6,3 +6,13 @@ elettronica, programmazione e design per creare un sistema di emergenza immediat
 utilizzabile nella vita quotidiana.
 
 LINK: sos-ring.github.io/SOS-Ring
+
+Contatti:
+sosringbt@gmail.com
+
+Autori:
+Campisi Alessio (linkedin.com/in/alessio-campisi-6b6227358)
+Anzalone Giulio
+Villa Giorgio
+Russo Vincenzo
+Rosamaria Barone
